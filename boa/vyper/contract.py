@@ -652,9 +652,8 @@ class VyperContract(_BaseContract):
                 abi.decode(typ.abi_type.selector_name(), encoded_topic)
             )
 
-        tuple_typ = TupleType(arg_typs)
-
-        args = abi_decode(tuple_typ.abi_type.selector_name(), data)
+        tuple_typ = TupleT(arg_typs)
+        args = abi.decode(tuple_typ.abi_type.selector_name(), data)
 
         return Event(log_id, self.address, event_t, decoded_topics, args)
 

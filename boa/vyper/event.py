@@ -1,7 +1,6 @@
 from dataclasses import dataclass
+from functools import cached_property
 from typing import Any, Dict, List, Tuple
-
-from vyper.utils import cached_property
 
 
 @dataclass
